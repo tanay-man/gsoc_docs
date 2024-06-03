@@ -1,12 +1,11 @@
+## GSOC'24 : Implementation of classes and OOP features.
 
-```markdown
-## Implementing Basic OOP Features in LPython
-
-LPython is a statically typed, compiled programming language with a syntax inspired by Python. It aims to provide first-class support for working with both Python and C libraries. LPython supports multiple backend targets like C, C++, and LLVM IR, allowing for compilation to target executables using the appropriate C/C++ compiler or the LLVM compiler toolchain. Due to its static typing and ahead-of-time compilation, LPython offers significantly better performance than CPython. However, LPython is not yet feature-complete and still contains some bugs. One key feature currently missing from LPython is the Object-Oriented Programming (OOP) paradigm. My goal is to implement basic OOP features in LPython.
+### Week 1:
+LPython is a compiled language with static typing, drawing inspiration from Python's syntax. Designed to seamlessly integrate with both Python and C libraries, LPython features multiple backend targets, including C, C++, and LLVM IR. This enables compilation into executable files using the respective C/C++ or LLVM compiler toolchains. Thanks to its static typing and ahead-of-time compilation, LPython delivers performance that significantly surpasses that of CPython. However, LPython is not yet feature-complete and still contains some bugs. One key feature currently missing from LPython is the Object-Oriented Programming (OOP) paradigm. My goal is to implement basic OOP features in LPython.
 
 ### Work Done So Far
 
-I have successfully added class support to LPython. Previously, structs were used to represent classes. Now, the Abstract Syntax Tree (AST) node can also house function definitions. Additionally, I fixed a bug in the `visitClassDef` function in `python_ast_to_asr`. This function was being called twice, causing the symbol table for the class to be generated twice. This issue has now been resolved.
+I have successfully added class support to LPython. Previously, structs were used to represent classes. Now, the Abstract Syntax Representation (ASR) node can also house function definitions. Additionally, I fixed a bug in the `visitClassDef` function in `python_ast_to_asr`. This function was being called twice, causing the symbol table for the class to be generated twice. This issue has now been resolved.
 
 You can view the changes in this pull request: [PR #2721](https://github.com/lcompilers/lpython/pull/2721).
 
@@ -27,5 +26,4 @@ You can view the changes in this pull request: [PR #2721](https://github.com/lco
 ### Conclusion
 
 By implementing these tasks, we aim to bring basic OOP capabilities to LPython, making it more powerful and versatile. Stay tuned for updates as we continue to enhance LPython's feature set.
-```
 
